@@ -9,11 +9,13 @@ import toast from "react-hot-toast";
 
 const SeniorsExperiencesPage = () => {
   const [searchParams] = useSearchParams();
-  const [activeAiReviewId, setActiveAiReviewId] = useState(urlAiReviewId);
   // Get params from URL
   const companyQuery = searchParams.get("search") || searchParams.get("company") || "";
   const roleQuery = searchParams.get("role") || "";
   const urlAiReviewId = searchParams.get("aiReviewId"); 
+
+  const [activeAiReviewId, setActiveAiReviewId] = useState(urlAiReviewId);
+
   // State
   const [experiences, setExperiences] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -155,7 +157,7 @@ const SeniorsExperiencesPage = () => {
                       <div className="space-y-2 mt-4 text-xs font-medium text-gray-400 border-t border-gray-100 pt-4">
                           <div className="flex items-center gap-2">
                              <User size={14}/> 
-                             <span>{exp.user?.name || exp.user?.email?.split('@')[0] || "Anonymous"}</span>
+                             <span> {exp.isAnonymous ? "Anonymous" : (exp.user?.name || exp.user?.email?.split('@')[0] || "Anonymous")} </span>
                           </div>
                           <div className="flex items-center gap-2">
                              <Calendar size={14}/> 

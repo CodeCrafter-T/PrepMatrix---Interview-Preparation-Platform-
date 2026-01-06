@@ -80,8 +80,7 @@ const MyPreparationsPage = () => {
                     ) : (
                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                           {preps.map((item) => {
-                           console.log("DEBUG ITEM:", item);
-                             const expLink = `/mypreparations/experiences?search=${encodeURIComponent(item.companyName.trim())}&role=${encodeURIComponent(item.role.trim())}${item.aiReviewId ? `&aiReviewId=${item.aiReviewId}` : ''}`;
+                             const expLink = `/mypreparations/experiences?company=${encodeURIComponent(item.companyName)}&role=${encodeURIComponent(item.role)}${item.aiReviewId ? `&aiReviewId=${item.aiReviewId}` : ''}`;
                              return (
                                 <div key={item._id} className="bg-base-200 rounded-[2rem] p-8 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col min-h-[260px] relative group">
                                    <Link to={expLink} className="absolute inset-0 z-0 rounded-[2rem]" />
