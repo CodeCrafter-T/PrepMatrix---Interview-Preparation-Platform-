@@ -59,9 +59,6 @@ const AIReviewPage = () => {
         
         {/* Sidebar */}
         <aside className="w-64 bg-base-200 border-r border-base-300 hidden md:flex flex-col p-6 gap-2">
-          <div className="font-bold text-base-content/40 text-xs uppercase tracking-wider mb-2">
-            Navigation
-          </div>
           
           {/* link to seniorsexperience page, passes company name AND the AI review ID */}
           <Link 

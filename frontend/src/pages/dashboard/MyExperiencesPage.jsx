@@ -94,7 +94,7 @@ const MyExperiencesPage = () => {
                                 </div>
 
                                 <div className="mt-8 relative z-20 flex gap-3">
-                                   <Link to={`/experience/edit/${exp._id}`} className="btn btn-primary btn-sm text-white rounded-full px-6 normal-case font-medium shadow-md flex-1">
+                                   <Link to={`/updateexperience/${exp._id}`} className="btn btn-primary btn-sm text-white rounded-full px-6 normal-case font-medium shadow-md flex-1">
                                       <Edit size={14} className="mr-2"/> Update
                                    </Link>
                                    <button onClick={(e) => handleDelete(exp._id, e)} disabled={deletingId === exp._id} className="btn btn-outline btn-error btn-sm rounded-full px-4">

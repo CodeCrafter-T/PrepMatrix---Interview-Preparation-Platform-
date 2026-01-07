@@ -68,7 +68,7 @@ const SeniorsExperiencesPage = () => {
       
       {/* Header */}
       <header className="h-20 border-b border-base-300 flex items-center justify-between px-8 bg-base-100 shrink-0 sticky top-0 z-20">
-        <h1 className="text-3xl italic font-medium text-primary font-serif">
+        <h1 className="text-3xl italic font-medium text-primary" style={{ fontFamily: '"Be Vietnam Pro", sans-serif' }}>
           Prepare For An Interview
         </h1>
         
@@ -101,7 +101,7 @@ const SeniorsExperiencesPage = () => {
           {/* Title */}
           {companyQuery && (
               <div className="max-w-4xl mx-auto mb-6">
-                  <h2 className="text-2xl font-bold text-gray-800 capitalize">
+                  <h2 className="text-4xl font-bold text-gray-800 capitalize">
                     Experiences at {companyQuery}
                   </h2>
               </div>

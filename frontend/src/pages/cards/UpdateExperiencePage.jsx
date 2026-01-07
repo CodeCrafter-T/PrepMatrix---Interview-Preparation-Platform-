@@ -12,7 +12,7 @@ import { useAuthStore } from "../../store/useAuthStore";
 const CreateExperiencePage = () => {
   const { id } = useParams(); 
   const navigate = useNavigate();
-  const { logout, authUser } = useAuthStore();
+  const { authUser } = useAuthStore();
   const isEditMode = !!id; 
   const [loading, setLoading] = useState(false);
   const [initialLoading, setInitialLoading] = useState(isEditMode);
@@ -185,23 +185,9 @@ const CreateExperiencePage = () => {
   return (
     <div className="min-h-screen bg-base-100 font-sans text-base-content flex flex-col">
       
-      {/* Header */}
-      <header className="h-16 border-b border-base-300 flex items-center justify-between px-6 bg-base-100 shrink-0 sticky top-0 z-30">
-        <h1 className="text-2xl italic font-medium text-primary">PrepMatrix</h1>
-        <button className="btn btn-error text-white btn-sm rounded-full px-6" onClick={logout}>
-          <LogOut className="size-5" /> <span className="hidden sm:inline">Logout</span>
-        </button>
-      </header>
+
 
       <div className="flex flex-1 overflow-hidden">
-        {/* Sidebar */}
-        <aside className="w-64 bg-base-100 border-r border-base-300 hidden md:flex flex-col py-6">
-          <nav className="flex-1 space-y-1">
-             <SidebarItem icon={<LayoutDashboard size={18}/>} label="Home" path="/" />
-             <SidebarItem icon={<BookOpen size={18}/>} label="My Experiences" path="/myexperiences" isActive={true} />
-             <SidebarItem icon={<PenTool size={18}/>} label="My Preparations" path="/mypreparations" />
-          </nav>
-        </aside>
 
         {/* Main content */}
         <main className="flex-1 p-6 md:p-8 overflow-y-auto bg-base-200/50">
