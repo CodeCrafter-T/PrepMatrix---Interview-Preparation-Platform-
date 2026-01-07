@@ -12,3 +12,7 @@ provides systematic, real-time insights on tech stacks, frequent coding problems
 - **Database:** MongoDB (with Mongoose)
 - **AI Engine:** Groq API
 - **Authentication:** JWT (JSON Web Tokens) with HTTP-Only Cookies 
+
+## Demo :
+
+![Project Demo](assets/demo.gif)
